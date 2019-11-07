@@ -1,0 +1,16 @@
+﻿@model List<TestTask.ViewModels.UserViewModel>
+@{
+    ViewBag.Title = "GetUsers";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="users-list">
+    <h3 class="text-center">Users</h3>
+    @foreach (var user in Model)
+    {
+        <div>
+            <p> @user.LoginDateFormatted @user.Name ел спаржу уже @user.UserCount раз</p>
+        </div>
+    }
+</div>

@@ -1,0 +1,25 @@
+﻿@model TestTask.ViewModels.UserViewModel
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="login-form">
+    @using (Html.BeginForm())
+    {
+        <h3 class="text-center">Main page</h3>
+        <br />
+        <div class="form-group">
+            <label>Name</label>
+            @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+        </div>
+        <div class="form-group">
+            <label>Email</label>
+            @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+        </div>
+
+        <input type="submit" value="Я съел спаржу!" class="btn btn-primary btn-block" />
+
+    }
+</div>
